@@ -25,7 +25,6 @@ function quickSort(arr) {
 }
 
 
-
 const numbers = input.slice(1).map(Number); //첫 번째 수 제외
 
 const sortedNumbers = quickSort(numbers);
