@@ -56,7 +56,9 @@ dp.forEach((value,index)=>{
 console.log(dp[x])
 ```
 temp에는 index에 도달하기까지의 가능한 모든 연산의 결과가 담겨있다 
+
 ex) 9 => %3 , -1 가능 => dp[9/3] 와 dp[9-1]의 value를 temp에 담아두고,
+
 (현재 index까지 오는 횟수) +1 을 한 뒤, 더 작은 값을 dp[9]에 담는다  
 
 
