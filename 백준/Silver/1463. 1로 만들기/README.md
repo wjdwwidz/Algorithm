@@ -46,7 +46,8 @@ dp.forEach((value,index)=>{
         index%2 === 0?temp.push(dp[index/2]):0;
         index%3 === 0?temp.push(dp[index/3]):0;
 ```
-	예를 들어, index가 4인 경우에는 4 / 2가 2이므로, dp[4]를 계산하기 위해 이전에 계산한 dp[2]의 값을 활용
+ 예를 들어, index가 4인 경우에는 4 / 2가 2이므로, dp[4]를 계산하기 위해 이전에 계산한 dp[2]의 값을 활용
+ 
  
 ```
         dp[index] = Math.min(...temp)+1;   
