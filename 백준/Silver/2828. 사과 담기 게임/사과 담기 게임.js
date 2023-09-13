@@ -1,6 +1,6 @@
 const fs = require('fs');
 let [screen,box,howMany,...nums] = fs.readFileSync('/dev/stdin').toString().trim().split(/\s+/).map(Number);
-let nowApple = 0; // 초기 바구니 위치
+let nowApple = 1; // 초기 바구니 위치
 
 let cnt = 0; // 바구니 이동 횟수
 
@@ -18,4 +18,4 @@ for (const item of nums) {
     }
 }
 
-console.log(cnt-1);
+console.log(cnt);
