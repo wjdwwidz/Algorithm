@@ -1,26 +1,24 @@
 def solution(answers):
-    answer = []
-    a = [1, 2, 3, 4, 5]
-    b = [2, 1, 2, 3, 2, 4, 2, 5]
-    c = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
-    count_a = count_b = count_c = 0
     
-    for i in range(len(answers)):
-        if a[i % len(a)] == answers[i]:
-            count_a += 1
-        if b[i % len(b)] == answers[i]:
-            count_b += 1
-        if c[i % len(c)] == answers[i]:
-            count_c += 1
-            
-    max_count = max(count_a, count_b, count_c)
-    
-    if max_count == count_a:
-        answer.append(1)
-    if max_count == count_b:
-        answer.append(2)
-    if max_count == count_c:
-        answer.append(3)
-        
-    return answer
+    patterns = [
+        [1,2,3,4,5],
+        [2,1,2,3,2,4,2,5],
+        [3,3,1,1,2,2,4,4,5,5]
+    ]
 
+    scores =[0,0,0]
+    cnt = 0
+    
+    #answers의 크기만큼 배열을 순회하면서 값이 같은지 count
+    for i , answer in enumerate(answers) :
+        for j ,pattern in enumerate(patterns) :
+            if answer == pattern[i%len(pattern)] :
+                scores[j] += 1
+
+    max_score = max(scores)
+    highest_scores = []
+
+    for i, score in enumerate(scores) :
+        if score == max_score:
+            highest_scores.append(i+1)
+    return highest_scores
