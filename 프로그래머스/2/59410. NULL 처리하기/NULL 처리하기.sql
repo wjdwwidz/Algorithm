@@ -1,0 +1,4 @@
+-- 코드를 입력하세요NAME, 
+SELECT ANIMAL_TYPE, IFNULL(name,'No name') as NAME, SEX_UPON_INTAKE
+from ANIMAL_INS
+order by ANIMAL_ID
