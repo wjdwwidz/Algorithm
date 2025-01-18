@@ -1,8 +1,7 @@
 -- 코드를 입력하세요
-
-SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents,date_format(r.CREATED_DATE,'%Y-%m-%d')
-FROM used_goods_board AS b
-JOIN used_goods_reply AS r ON b.board_id = r.board_id
-WHERE date_format(b.CREATED_DATE,'%Y-%m') ='2022-10'
-ORDER BY r.created_date ASC, b.title ASC
-
+SELECT b.TITLE, b.BOARD_ID, r.REPLY_ID, r.WRITER_ID, r.CONTENTS, 
+DATE_FORMAT(r.CREATED_DATE, '%Y-%m-%d')
+FROM USED_GOODS_BOARD b JOIN USED_GOODS_REPLY r
+ON b.BOARD_ID = r.BOARD_ID
+WHERE DATE_FORMAT(b.CREATED_DATE, '%Y-%m') = '2022-10'
+ORDER BY r.CREATED_DATE, b.TITLE
